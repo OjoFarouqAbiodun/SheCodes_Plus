@@ -10,3 +10,12 @@
 // Challenge 4
 // In your code, replace the content of the element with id special
 // by your favorite country (other than Portugal of course)
+
+let specialID = document.querySelector('#special');
+console.log(specialID);
+
+console.log(document.querySelectorAll('.country'));
+
+specialID.classList.add('special');
+
+specialID.textContent = 'Brazil 🇧🇷';
