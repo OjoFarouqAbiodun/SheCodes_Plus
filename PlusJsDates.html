@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Dates</title>
+</head>
+
+<body>
+  <h1>JavaScript Dates</h1>
+
+  <h2>
+    This is the Current Date
+  </h2>
+
+
+  <script>
+    // let now = new Date();
+    // let h2 = document.querySelector("h2");
+    // let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    // let day = days[now.getDay()];
+    // let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    // let month = months[now.getMonth()];
+    // let date = now.getDate();
+    // let year = now.getFullYear();
+    // let hour = now.getHours();
+    // let minute = now.getMinutes();
+    // let second = now.getSeconds();
+
+    // h2.innerHTML = `${day} ${month} ${date}, ${year}, ${hour}:${minute}:${second}`;
+
+    let currentDate = new Date();
+    console.log(currentDate);
+
+    let Milliseconds = currentDate.getMilliseconds();
+    console.log(Milliseconds);
+
+    let day = currentDate.getDay();
+    console.log(day);
+
+    let year = currentDate.getFullYear();
+    console.log(year);
+
+    let month = currentDate.getMonth();
+    console.log(month);
+
+    let date = currentDate.getDate();
+
+    
+    let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    
+    let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+    console.log(`Today is ${days[day]}, ${months[month]} ${date}, ${year}`);
+
+    function formatDate(newDate) {
+      let currentDate = new Date();
+      let day = currentDate.getDay();
+      let month = currentDate.getMonth();
+      let year = currentDate.getFullYear();
+      let date = currentDate.getDate();
+
+      let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+      let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+      return newDate;
+    };
+
+    formatDate();
+
+    console.log(formatDate(new Date()));
+
+  </script>
+</body>
+
+</html>
