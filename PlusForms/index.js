@@ -21,7 +21,7 @@ function passwordSubmit(event) {
 		alert("Please enter a password before submitting.");
 	}
 
-	submitButton.addEventListener("click", submitted);
+	submitButton.addEventListener("click");
 }
 
 passwordForm.addEventListener("submit", passwordSubmit);
