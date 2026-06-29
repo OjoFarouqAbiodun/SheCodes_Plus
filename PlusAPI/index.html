@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SHECODES API</title>
   <script src="https://unpkg.com/axios@1.13.2/dist/axios.min.js"></script>
 </head>
+
 <body>
   <h1>🛰 API</h1>
 
@@ -13,13 +15,42 @@
 
 
   <script>
+    <!-- //PRACTICE
     // function displayUsername(response) {
     //   console.log(response.data.username);
     // }
     
     // let apiUrl = "https://jsonplaceholder.typicode.com/users/1";
 
-    // axios.get(apiUrl).then(displayUsername);
+    // axios.get(apiUrl).then(displayUsername); -->
+
+
+    //CHALLENGE
+    function showResponse(response) {
+      console.log(response);
+    }
+    let Url = "https://jsonplaceholder.typicode.com/comments";
+
+    function show(response) {
+      console.log(response.data.email);
+    }
+
+    let firstCommentUrl = "https://jsonplaceholder.typicode.com/comments/1";
+
+    axios.get(firstCommentUrl).then(show);
+    axios.get(Url).then(showResponse);
+
+    // ALTERNATIVELY
+    function showResponse(response) {
+      console.log(response); 
+      console.log(response.data[0].email); 
+    } 
+    let apiUrl = "https://jsonplaceholder.typicode.com/comments";
+
+    axios.get(apiUrl).then(showResponse);
+
   </script>
+
 </body>
+
 </html>
