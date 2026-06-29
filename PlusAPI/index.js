@@ -4,8 +4,12 @@ let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${api
 
 function show(response) {
 console.log(response);
-console.log(response.data.temprature.current);
-
+console.log(response.data);
+console.log(response.data.temperature.current);
+let h1 = document.querySelector("#h1");
+let city = response.data.city;
+let temperature = Math.round(response.data.temperature.current);
+h1.innerHTML = `It is ${temperature} degrees in ${city}`;
 }
 
 axios.get(apiUrl).then(show);
